@@ -4453,6 +4453,13 @@ void SetTextureWrap(Texture2D texture, int wrap)
             rlTextureParameters(texture.id, RL_TEXTURE_WRAP_S, RL_TEXTURE_WRAP_MIRROR_CLAMP);
             rlTextureParameters(texture.id, RL_TEXTURE_WRAP_T, RL_TEXTURE_WRAP_MIRROR_CLAMP);
         } break;
+        case TEXTURE_WRAP_BORDER:
+        {
+            rlTextureParameters(texture.id, RL_TEXTURE_WRAP_S, RL_TEXTURE_WRAP_BORDER);
+            rlTextureParameters(texture.id, RL_TEXTURE_WRAP_T, RL_TEXTURE_WRAP_BORDER);
+        } break;
+
+        
         default: break;
     }
 }

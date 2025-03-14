@@ -259,6 +259,10 @@
 #define RL_TEXTURE_WRAP_CLAMP                   0x812F      // GL_CLAMP_TO_EDGE
 #define RL_TEXTURE_WRAP_MIRROR_REPEAT           0x8370      // GL_MIRRORED_REPEAT
 #define RL_TEXTURE_WRAP_MIRROR_CLAMP            0x8742      // GL_MIRROR_CLAMP_EXT
+#define RL_TEXTURE_WRAP_BORDER                  0x812D      // GL_CLAMP_TO_BORDER
+
+#define RL_TEXTURE_BORDER_COLOR                 0x1004      // GL_TEXTURE_BORDER_COLOR
+
 
 // Matrix modes (equivalent to OpenGL)
 #define RL_MODELVIEW                            0x1700      // GL_MODELVIEW
@@ -656,7 +660,10 @@ RLAPI void rlDisableTexture(void);                      // Disable texture
 RLAPI void rlEnableTextureCubemap(unsigned int id);     // Enable texture cubemap
 RLAPI void rlDisableTextureCubemap(void);               // Disable texture cubemap
 RLAPI void rlTextureParameters(unsigned int id, int param, int value); // Set texture parameters (filter, wrap)
+RLAPI void rlTextureParameters(unsigned int id, int param, int value); // Set texture parameters (filter, wrap)
 RLAPI void rlCubemapParameters(unsigned int id, int param, int value); // Set cubemap parameters (filter, wrap)
+RLAPI void rlTextureVectorParameter(unsigned int id, int param, float value[4]);
+
 
 // Shader state
 RLAPI void rlEnableShader(unsigned int id);             // Enable shader program
@@ -1773,6 +1780,22 @@ void rlTextureParameters(unsigned int id, int param, int value)
 #if defined(GRAPHICS_API_OPENGL_33)
         case RL_TEXTURE_MIPMAP_BIAS_RATIO: glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_LOD_BIAS, value/100.0f);
 #endif
+        default: break;
+    }
+
+    glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+void rlTextureVectorParameter(unsigned int id, int param, float value[4])
+{
+    glBindTexture(GL_TEXTURE_2D, id);
+
+    switch (param)
+    {
+        case RL_TEXTURE_BORDER_COLOR:
+        {
+            glTexParameterfv(GL_TEXTURE_2D, param, value);
+        } break;
         default: break;
     }
 
