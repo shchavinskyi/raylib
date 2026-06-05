@@ -894,13 +894,14 @@ Enum 13: TextureFilter (6 values)
   Value[TEXTURE_FILTER_ANISOTROPIC_4X]: 3
   Value[TEXTURE_FILTER_ANISOTROPIC_8X]: 4
   Value[TEXTURE_FILTER_ANISOTROPIC_16X]: 5
-Enum 14: TextureWrap (4 values)
+Enum 14: TextureWrap (5 values)
   Name: TextureWrap
   Description: Texture parameters: wrap mode
   Value[TEXTURE_WRAP_REPEAT]: 0
   Value[TEXTURE_WRAP_CLAMP]: 1
   Value[TEXTURE_WRAP_MIRROR_REPEAT]: 2
   Value[TEXTURE_WRAP_MIRROR_CLAMP]: 3
+  Value[TEXTURE_WRAP_BORDER]: 4
 Enum 15: CubemapLayout (5 values)
   Name: CubemapLayout
   Description: Cubemap layouts

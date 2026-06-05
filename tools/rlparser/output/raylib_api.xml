@@ -597,11 +597,12 @@
             <Value name="TEXTURE_FILTER_ANISOTROPIC_8X" integer="4" desc="Anisotropic filtering 8x" />
             <Value name="TEXTURE_FILTER_ANISOTROPIC_16X" integer="5" desc="Anisotropic filtering 16x" />
         </Enum>
-        <Enum name="TextureWrap" valueCount="4" desc="Texture parameters: wrap mode">
+        <Enum name="TextureWrap" valueCount="5" desc="Texture parameters: wrap mode">
             <Value name="TEXTURE_WRAP_REPEAT" integer="0" desc="Repeats texture in tiled mode" />
             <Value name="TEXTURE_WRAP_CLAMP" integer="1" desc="Clamps texture to edge pixel in tiled mode" />
             <Value name="TEXTURE_WRAP_MIRROR_REPEAT" integer="2" desc="Mirrors and repeats the texture in tiled mode" />
             <Value name="TEXTURE_WRAP_MIRROR_CLAMP" integer="3" desc="Mirrors and clamps to border the texture in tiled mode" />
+            <Value name="TEXTURE_WRAP_BORDER" integer="4" desc="Read color form texture parameter" />
         </Enum>
         <Enum name="CubemapLayout" valueCount="5" desc="Cubemap layouts">
             <Value name="CUBEMAP_LAYOUT_AUTO_DETECT" integer="0" desc="Automatically detect layout type" />

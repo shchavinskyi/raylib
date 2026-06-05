@@ -2844,6 +2844,11 @@
           "name": "TEXTURE_WRAP_MIRROR_CLAMP",
           "value": 3,
           "description": "Mirrors and clamps to border the texture in tiled mode"
+        },
+        {
+          "name": "TEXTURE_WRAP_BORDER",
+          "value": 4,
+          "description": "Read color form texture parameter"
         }
       ]
     },
