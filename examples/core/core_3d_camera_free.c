@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raylib [core] example - Initialize 3d camera free
+*   raylib [core] example - 3d camera free
 *
 *   Example complexity rating: [★☆☆☆] 1/4
 *
@@ -49,7 +49,7 @@ int main(void)
         //----------------------------------------------------------------------------------
         UpdateCamera(&camera, CAMERA_FREE);
 
-        if (IsKeyPressed('Z')) camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };
+        if (IsKeyPressed(KEY_Z)) camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };
         //----------------------------------------------------------------------------------
 
         // Draw

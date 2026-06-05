@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raylib [shapes] example - Draw basic shapes 2d (rectangle, circle, line...)
+*   raylib [shapes] example - basic shapes
 *
 *   Example complexity rating: [★☆☆☆] 1/4
 *
@@ -25,7 +25,7 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [shapes] example - basic shapes drawing");
+    InitWindow(screenWidth, screenHeight, "raylib [shapes] example - basic shapes");
 
     float rotation = 0.0f;
 
@@ -50,8 +50,10 @@ int main(void)
 
             // Circle shapes and lines
             DrawCircle(screenWidth/5, 120, 35, DARKBLUE);
-            DrawCircleGradient(screenWidth/5, 220, 60, GREEN, SKYBLUE);
+            DrawCircleGradient((Vector2){ screenWidth/5.0f, 220.0f }, 60, GREEN, SKYBLUE);
             DrawCircleLines(screenWidth/5, 340, 80, DARKBLUE);
+            DrawEllipse(screenWidth/5, 120, 25, 20, YELLOW);
+            DrawEllipseLines(screenWidth/5, 120, 30, 25, YELLOW);
 
             // Rectangle shapes and lines
             DrawRectangle(screenWidth/4*2 - 60, 100, 120, 60, RED);

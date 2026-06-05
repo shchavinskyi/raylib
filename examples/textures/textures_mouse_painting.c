@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raylib [textures] example - Mouse painting
+*   raylib [textures] example - mouse painting
 *
 *   Example complexity rating: [★★★☆] 3/4
 *
@@ -179,7 +179,7 @@ int main(void)
         ClearBackground(RAYWHITE);
 
         // NOTE: Render texture must be y-flipped due to default OpenGL coordinates (left-bottom)
-        DrawTextureRec(target.texture, (Rectangle) { 0, 0, (float)target.texture.width, (float)-target.texture.height }, (Vector2) { 0, 0 }, WHITE);
+        DrawTextureRec(target.texture, (Rectangle){ 0, 0, (float)target.texture.width, (float)-target.texture.height }, (Vector2) { 0, 0 }, WHITE);
 
         // Draw drawing circle for reference
         if (mousePos.y > 50)
@@ -210,7 +210,7 @@ int main(void)
         {
             DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), Fade(RAYWHITE, 0.8f));
             DrawRectangle(0, 150, GetScreenWidth(), 80, BLACK);
-            DrawText("IMAGE SAVED:  my_amazing_texture_painting.png", 150, 180, 20, RAYWHITE);
+            DrawText("IMAGE SAVED!", 150, 180, 20, RAYWHITE);
         }
 
         EndDrawing();

@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raylib [core] example - Input Gestures Detection
+*   raylib [core] example - input gestures
 *
 *   Example complexity rating: [★★☆☆] 2/4
 *
@@ -118,4 +118,6 @@ int main(void)
     //--------------------------------------------------------------------------------------
     CloseWindow();        // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
+
+    return 0;
 }

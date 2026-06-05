@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raylib [textures] example - Image text drawing using TTF generated font
+*   raylib [textures] example - image text
 *
 *   Example complexity rating: [★★☆☆] 2/4
 *
@@ -25,7 +25,7 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [texture] example - image text drawing");
+    InitWindow(screenWidth, screenHeight, "raylib [textures] example - image text");
 
     Image parrots = LoadImage("resources/parrots.png"); // Load image in CPU memory (RAM)
 
@@ -38,7 +38,7 @@ int main(void)
     Texture2D texture = LoadTextureFromImage(parrots);  // Image converted to texture, uploaded to GPU memory (VRAM)
     UnloadImage(parrots);   // Once image has been converted to texture and uploaded to VRAM, it can be unloaded from RAM
 
-    Vector2 position = { (float)(screenWidth/2 - texture.width/2), (float)(screenHeight/2 - texture.height/2 - 20) };
+    Vector2 position = { (float)screenWidth/2 - (float)texture.width/2, (float)screenHeight/2 - (float)texture.height/2 - 20 };
 
     bool showFont = false;
 

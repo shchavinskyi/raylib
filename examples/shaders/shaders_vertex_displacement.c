@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raylib [shaders] example - Vertex displacement
+*   raylib [shaders] example - vertex displacement
 *
 *   Example complexity rating: [★★★☆] 3/4
 *
@@ -41,7 +41,7 @@ int main(void)
     InitWindow(screenWidth, screenHeight, "raylib [shaders] example - vertex displacement");
 
     // set up camera
-    Camera camera = {0};
+    Camera camera = { 0 };
     camera.position = (Vector3) {20.0f, 5.0f, -20.0f};
     camera.target = (Vector3) {0.0f, 0.0f, 0.0f};
     camera.up = (Vector3) {0.0f, 1.0f, 0.0f};
@@ -52,7 +52,7 @@ int main(void)
     Shader shader = LoadShader(
         TextFormat("resources/shaders/glsl%i/vertex_displacement.vs", GLSL_VERSION),
         TextFormat("resources/shaders/glsl%i/vertex_displacement.fs", GLSL_VERSION));
-    
+
     // Load perlin noise texture
     Image perlinNoiseImage = GenImagePerlinNoise(512, 512, 0, 0, 1.0f);
     Texture perlinNoiseMap = LoadTextureFromImage(perlinNoiseImage);
@@ -64,7 +64,7 @@ int main(void)
     rlActiveTextureSlot(1);
     rlEnableTexture(perlinNoiseMap.id);
     rlSetUniformSampler(perlinNoiseMapLoc, 1);
-    
+
     // Create a plane mesh and model
     Mesh planeMesh = GenMeshPlane(50, 50, 50, 50);
     Model planeModel = LoadModelFromMesh(planeMesh);
